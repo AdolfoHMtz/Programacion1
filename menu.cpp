@@ -25,7 +25,8 @@ int main(){
             break;
         }
     }while(opc!=4);
-    cout <<"Has gastado: "<<cuenta<<endl;
+    cout<<"----------------------------------"<<endl; 
+    cout <<"El total a pagar es de: $ "<<cuenta<<endl;
     cout<<"Gracias por su visita"<<endl;
     return 0;
 }
@@ -36,7 +37,7 @@ int menuP(){
   cout <<"1.- Alimentos"<<endl;
   cout <<"2.- Bebidas"<<endl;
   cout <<"3.- Postres"<<endl;
-  cout <<"4.- Salir"<<endl;
+  cout <<"4.- Pagar Cuenta"<<endl;
   cout<<"Ingresa la opcion deseada: ";
   cin>>opc;
   return opc;
@@ -51,7 +52,7 @@ int menuP(){
     cout <<"1.- Sopa\t $30.00"<<endl;
     cout <<"2.- Pasta\t $40.00"<<endl;
     cout <<"3.- Filete\t $50.00"<<endl;
-    cout <<"4.- Salir-Cuenta"<<endl;
+    cout <<"4.- Regresar al menú"<<endl;
     cout<<"Ingresa la opcion deseada: ";
     cin >> opcA1;
   switch (opcA1)
@@ -87,28 +88,28 @@ int menuP(){
     do 
     {
     cout <<"---Menu de Bebidas---\n";
-    cout <<"1.- Refresco\t $20.00"<<endl;
-    cout <<"2.- Cerveza\t $30.00"<<endl;
-    cout <<"3.- Vino\t $50.00"<<endl;
-    cout <<"4.- Salir-Cuenta"<<endl;
+    cout <<"1.- Agua\t $40.00"<<endl;
+    cout <<"2.- Michelada\t $60.00"<<endl;
+    cout <<"3.- Coca-Cola\t $20.00"<<endl;
+    cout <<"4.- Regresar al menú"<<endl;
     cout<<"Ingresa la opcion deseada: ";
     cin >> opcB1;
   switch (opcB1)
   {
   case 1:
-    cout<<"Ingresa la cantidad de Refrescos que quieres: ";
+    cout<<"Ingresa la cantidad de vasos de Agua que quieres: ";
     cin>>cant;
-    cuenta=cuenta+cant*20;
+    cuenta=cuenta+cant*40;
         break;
    case 2:
-    cout<<"Ingresa la cantidad de Cervezas que quieres: ";
+    cout<<"Ingresa la cantidad de Micheladas que quieres: ";
     cin>>cant;
-    cuenta=cuenta+cant*30;
+    cuenta=cuenta+cant*60;
         break;
    case 3:
-    cout<<"Ingresa la cantidad de Vinos que quieres: ";
+    cout<<"Ingresa la cantidad de botellas de Coca-Cola que quieres: ";
     cin>>cant;
-    cuenta=cuenta+cant*50;
+    cuenta=cuenta+cant*20;
         break;
    case 4:
     cout<<"Has gastado: "<<cuenta<<endl;
@@ -126,28 +127,28 @@ int menuP(){
     do 
     {
     cout <<"---Menu de Postres---\n";
-    cout <<"1.- Pastel\t $30.00"<<endl;
-    cout <<"2.- Helado\t $20.00"<<endl;
-    cout <<"3.- Galletas\t $10.00"<<endl;
-    cout <<"4.- Salir-Cuenta"<<endl;
+    cout <<"1.- Pay\t $60.00"<<endl;
+    cout <<"2.- Flan\t $30.00"<<endl;
+    cout <<"3.- Pastel\t $20.00"<<endl;
+    cout <<"4.- Regresar al menú"<<endl;
     cout<<"Ingresa la opcion deseada: ";
     cin >> opcPo1;
   switch (opcPo1)
   {
   case 1:
-    cout<<"Ingresa la cantidad de Pasteles que quieres: ";
+    cout<<"Ingresa la cantidad de Pay que quieres: ";
+    cin>>cant;
+    cuenta=cuenta+cant*60;
+        break;
+   case 2:
+    cout<<"Ingresa la cantidad de Flan que quieres: ";
     cin>>cant;
     cuenta=cuenta+cant*30;
         break;
-   case 2:
-    cout<<"Ingresa la cantidad de Helados que quieres: ";
+   case 3:
+    cout<<"Ingresa la cantidad de Pastel que quieres: ";
     cin>>cant;
     cuenta=cuenta+cant*20;
-        break;
-   case 3:
-    cout<<"Ingresa la cantidad de Galletas que quieres: ";
-    cin>>cant;
-    cuenta=cuenta+cant*10;
         break;
    case 4:
     cout<<"Has gastado: "<<cuenta<<endl;
